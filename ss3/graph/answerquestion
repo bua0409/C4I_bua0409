@@ -1,0 +1,29 @@
+1.Web Opponent là một bộ các công nghệ khác nhau cho phép bạn tạo các phần tử tùy chỉnh 
+có thể sử dụng lại - với chức năng của chúng được gói gọn trong phần còn lại của mã - và sử dụng 
+chúng trong các ứng dụng web của bạn.
+
+2.
++)Custom elements
+CustomElementRegistry
+Contains functionality related to custom elements, most notably the 
+CustomElementRegistry.define() : method used to register new custom elements so they can then be used in your document.
+Window.customElements : Returns a reference to the CustomElementRegistry object.
++) Shadow DOM
+ShadowRoot
+Represents the root node of a shadow DOM subtree.
+DocumentOrShadowRoot
+A mixin defining features that are available across document and shadow roots.
+Element extensions
+Extensions to the Element interface related to shadow DOM:
+The Element.attachShadow() : method attaches a shadow DOM tree to the specified element.
+The Element.shadowRoot : property returns the shadow root attached to the specified element, or null if there 
+is no shadow root attached.
++)HTML templates
+HTML templates
+<template>
+Contains an HTML fragment that is not rendered when a containing document is initially loaded, but 
+can be displayed at runtime using JavaScript, mainly used as the basis of custom element structures. 
+The associated DOM interface is HTMLTemplateElement.
+<slot>
+A placeholder inside a web component that you can fill with your own markup, which lets you create 
+separate DOM trees and present them together. The associated DOM interface is HTMLSlotElement.
