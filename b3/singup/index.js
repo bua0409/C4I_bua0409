@@ -15,9 +15,8 @@ btnRegister.addEventListener('click', function () {
     let isValid = checkValidate();
 
     if (isValid) {
-        alert('Gửi đăng ký thành công');
-    }
-});
+        alert("hay kiem tra email cua ban")
+};
 
 function checkValidate() {
     let nameValue = nameEle.value;
@@ -98,7 +97,7 @@ function isusername(usernameValue){
     return /^[A-Za-z ]+$/.test(nameValue)
 }
 function isEmail(emailValue) {
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailValue);
 }
 function isPhone(phoneValue){
     return /^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/.test(phoneValue)
@@ -113,5 +112,4 @@ function setSuccess(ele) {
 function setError(ele, message) {
     let parentEle = ele.parentNode;
     parentEle.classList.add('error');
-    parentEle.querySelector('small').innerText = message;
-}
+    parentEle.querySelector('small').innerText = message;}
